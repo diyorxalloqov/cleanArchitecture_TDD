@@ -36,6 +36,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 .showSnackBar(SnackBar(content: Text(state.errorText)));
           },
           child: Scaffold(
+            appBar: AppBar(
+              title: const Text("TDD Clean Architechture"),
+            ),
             body: BlocBuilder<WeatherBloc, WeatherState>(
               builder: (context, state) {
                 if (state.status == ActionStatus.isLoading) {
@@ -47,13 +50,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 16, vertical: 18),
                     child: ListView.builder(
-                        itemCount: state.list.length,
-                        itemBuilder: (context, index) {
-                          return ListTile(
-                            title: Text(state.list[index].first_name),
-                            subtitle: Text(state.list[index].email),
-                          );
-                        }),
+                      itemCount: state.list.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          title: Text(state.list[index].first_name),
+                          subtitle: Text(state.list[index].email),
+                        );
+                      },
+                    ),
                   );
                 } else {
                   return const Center(
