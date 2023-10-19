@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, annotate_overrides, overridden_fields
 
 import 'package:structure_lesson/modules/weather/domain/entity/weather_item.dart';
 

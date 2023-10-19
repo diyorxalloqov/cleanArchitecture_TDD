@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:structure_lesson/modules/weather/data/repository/weather_impl.dart';
 import 'package:structure_lesson/modules/weather/domain/usecase/get_weather.dart';
-import 'package:structure_lesson/application/bloc/weather_bloc.dart';
+import 'package:structure_lesson/modules/weather/presentation/bloc/weather/weather_bloc.dart';
 import 'package:structure_lesson/utils/enum.dart';
 
 class WeatherScreen extends StatefulWidget {
@@ -20,7 +20,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
     weatherBloc = WeatherBloc(GetWeatherUseCase(
         repo: RepositoryProvider.of<WeatherRepositoryImpl>(context)))
       ..add(GetWeather());
-
     super.initState();
   }
 

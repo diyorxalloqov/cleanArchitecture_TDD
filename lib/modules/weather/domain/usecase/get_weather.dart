@@ -1,7 +1,7 @@
-import 'package:structure_lesson/core/data/errors/failures.dart';
-import 'package:structure_lesson/core/data/usecase/usecase.dart';
 import 'package:structure_lesson/modules/weather/domain/entity/weather_item.dart';
 import 'package:structure_lesson/modules/weather/domain/repository/weather.dart';
+import 'package:structure_lesson/core/data/errors/failures.dart';
+import 'package:structure_lesson/core/data/usecase/usecase.dart';
 import 'package:structure_lesson/utils/either.dart';
 
 class GetWeatherUseCase
